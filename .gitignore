@@ -23,5 +23,5 @@
 hs_err_pid*
 .idea/
 .build/
-!target/site/*
-target/
+target/*
+!target/site

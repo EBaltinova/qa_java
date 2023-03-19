@@ -13,6 +13,7 @@ import java.util.List;
 
 @RunWith(Parameterized.class)
 public class LionTest {
+    private static final int EMPTY_KITTENS_COUNT = 0;
     private final String sex;
     private final Boolean hasManeExpected;
 
@@ -49,7 +50,7 @@ public class LionTest {
     public void getKittensReturnMockPositiveTest() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
         Lion lion = new Lion(sex, feline);
-        Assert.assertEquals(0, lion.getKittens());
+        Assert.assertEquals(EMPTY_KITTENS_COUNT, lion.getKittens());
     }
 
     @Test()
